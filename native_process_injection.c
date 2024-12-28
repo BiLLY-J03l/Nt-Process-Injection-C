@@ -52,7 +52,6 @@ int main(int argc, char **argv){
 	HANDLE hThread;
 	HANDLE hProcess;
 	DWORD OldProtect_MEM = 0;
-	DWORD OldProtect_THREAD = 0;
 	SIZE_T BytesWritten = 0;
 	SIZE_T shellcode_size = sizeof(shellcode);
 	HMODULE hNTDLL = Get_Module(L"NTDLL");
