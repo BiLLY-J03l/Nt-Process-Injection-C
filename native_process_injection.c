@@ -88,7 +88,7 @@ int main(int argc, char **argv){
 	
 	
 	// --- START GET PROCESS --- //
-	printf("[NtOpeneProcess] Creating Process..\n");
+	printf("[NtOpenProcess] Creating Process..\n");
 	STATUS = NT_OpenProcess(&hProcess,PROCESS_ALL_ACCESS,&Object_Attr,&CID);
 	if (STATUS != STATUS_SUCCESS) {
 		printf("[NtOpenProcess] Failed to get handle to process, error 0x%lx\n", STATUS);
