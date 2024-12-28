@@ -1,7 +1,7 @@
 # Nt-Process-Injection-C
 Process Injection with C and the Native undocumeneted API
 
--The malware uses the Nativ Api, which is considered stealthier.
+-The malware uses the Native Api, which is considered stealthier.
 
 -The malware allocates the encrypted shellcode in the .data section
 
