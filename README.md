@@ -3,9 +3,9 @@ Process Injection with C and the Native undocumeneted API
 
 -The malware uses the Native Api, which is considered stealthier.
 
--The malware allocates the encrypted shellcode in the .data section
+-It allocates the encrypted shellcode in the .data section
 
--First, the malware tries to get a handle to the NTDLL.dll then it uses a predefined file native.h and get the addresses of each function we wanna use.
+-First, it tries to get a handle to the NTDLL.dll then it uses a predefined file native.h and get the addresses of each function we wanna use.
 
 -Then it takes an arg to the process you want to inject the shellcode into.
 
