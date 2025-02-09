@@ -7,7 +7,7 @@ Process Injection with C and the Native undocumeneted API
 
 -First, it tries to get a handle to the NTDLL.dll then it uses a predefined file native.h and get the addresses of each function we wanna use.
 
--Then it takes an arg to the process you want to inject the shellcode into.
+-Then it enumrates the processes running on the machine and picks notepad.exe, you can change that in the enum_processes() function.
 
 -Then it gets a handle to the requested process.
 
@@ -17,7 +17,7 @@ Process Injection with C and the Native undocumeneted API
 
 -Then it adds the exec bit to the allocated memory permissions.
 
--Then it creates the thread with the malicious shellcode.
+-Then it creates the thread with the malicious shellcode in the target process address space.
 
 
 -listener options
