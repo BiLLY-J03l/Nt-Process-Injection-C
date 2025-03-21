@@ -1,23 +1,23 @@
 # Nt-Process-Injection-C
 ## Process Injection with C and the Native undocumeneted API
 
--The malware uses the Native API, which is considered stealthier.
+- The malware uses the Native API, which is considered stealthier.
 
--It allocates the encrypted shellcode in the .data section
+- It allocates the encrypted shellcode in the .data section
 
--First, it tries to get a handle to the NTDLL.dll then it uses a predefined file native.h and get the addresses of each function we wanna use.
+- First, it tries to get a handle to the NTDLL.dll then it uses a predefined file native.h and get the addresses of each function we wanna use.
 
--Then it enumrates the processes running on the machine and picks notepad.exe, you can change that in the enum_processes() function.
+- Then it enumrates the processes running on the machine and picks notepad.exe, you can change that in the enum_processes() function.
 
--Then it gets a handle to the requested process.
+- Then it gets a handle to the requested process.
 
--It decrypts the shellcode and allocates memory for the shellcode with READWRITE permissions.
+- It decrypts the shellcode and allocates memory for the shellcode with READWRITE permissions.
 
--Then it writes the shellcode to the allocated buffer.
+- Then it writes the shellcode to the allocated buffer.
 
--Then it adds the exec bit to the allocated memory permissions.
+- Then it adds the exec bit to the allocated memory permissions.
 
--Then it creates the thread with the malicious shellcode in the target process address space.
+- Then it creates the thread with the malicious shellcode in the target process address space.
 
 
 ## listener options
@@ -34,9 +34,9 @@
 
 
 ### UPDATED:
--you don't need to pass the pid arg, just open up notepad.exe and the malware will automatically enumerates the processes on the system till it get to it.
+- you don't need to pass the pid arg, just open up notepad.exe and the malware will automatically enumerates the processes on the system till it get to it.
 
--VirusTotal Analysis
+- VirusTotal Analysis
 
   ![image](https://github.com/user-attachments/assets/6fd9674d-f556-46db-8361-6b19676ec771)
 
